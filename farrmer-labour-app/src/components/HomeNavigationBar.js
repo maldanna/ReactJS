@@ -10,11 +10,14 @@ function HomeNavigationBar() {
 <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#">FLC</Navbar.Brand>
           <Nav className="ml-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="/findWork">FindWork</Nav.Link>
+            <Nav.Link href="/work">Work</Nav.Link>
+            <Nav.Link href="/findResource">FindResource</Nav.Link>
+            <Nav.Link href="/help">Help</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/profile">Profile</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
