@@ -1,6 +1,7 @@
 import React from "react";
 import {Nav,Navbar,Container} from 'react-bootstrap';
 import { Routes,Route,Link,NavLink } from "react-router-dom";
+import './HomeNavigationbarStyle.css';
 
 import About from './About';
 import Profile from './Profile';
@@ -8,6 +9,8 @@ import HomePage from './HomePage';
 import FindResource from './FindResource';
 import Work from './Work';
 import Help from './Help';
+import Signup from './Signup';
+import Login from "./Login";
 
 
 function HomeNavigationBar() {
@@ -22,6 +25,8 @@ function HomeNavigationBar() {
             <Nav.Link  as={NavLink} to="/findResource">FindResource</Nav.Link>
             <Nav.Link  as={NavLink} to="/help">Help</Nav.Link>
             <Nav.Link  as={NavLink} to="/about">About</Nav.Link>
+            <Nav.Link  as={NavLink} to="/signup">Signup</Nav.Link>
+            <Nav.Link  as={NavLink} to="/login">Login</Nav.Link>
             <Nav.Link  as={NavLink} to="/profile">Profile</Nav.Link>
           </Nav>
         </Container>
@@ -32,6 +37,8 @@ function HomeNavigationBar() {
         <Route path="/findWork" element={<home />} />
         <Route path="/findResource" element={<FindResource />} />
         <Route path="/about" element={<About />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
