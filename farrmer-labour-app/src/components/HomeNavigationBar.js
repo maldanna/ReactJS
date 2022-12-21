@@ -20,7 +20,6 @@ function HomeNavigationBar() {
               )
             }
           </Nav>
-
         </Container>
       </Navbar>
       </div>

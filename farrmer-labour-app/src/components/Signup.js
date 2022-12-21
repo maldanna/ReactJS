@@ -3,6 +3,7 @@ import HomePage from "./HomePage";
 import { Modal,Button } from "react-bootstrap";
 import createPortal from 'react-dom';
 import SignupModal from './SignupModal';
+import "./SignupStyle.css"
 function Signup()
 {   
     const [signupData,setsignupData] =useState({});
@@ -25,30 +26,29 @@ function Signup()
         console(signupData["password"]);
         setEmail(e.email.value)
     }
+    const signupFormSubmit = () =>{
+        alert("form submitted");
+    }
     return (
-        < Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Register</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                    <div className="auth-form-container">
-                        <form className="register-form" onSubmit={handleSubmit}>
-                            <label htmlFor="email">email</label>
-                            <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-                            <label htmlFor="password">password</label>
-                            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-                            <br />
-                            <br />
-                            <button class="btn btn-success" type="submit">Submit</button>
-                        </form>
-                    </div>
-            </Modal.Body>
-            <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                            Close
-                    </Button>
-            </Modal.Footer>
-        </Modal>
+        <div class="signup-form">
+            <form onSubmit={signupFormSubmit}>
+                <h3>Sign Up</h3>
+                <div className="mb-3">
+                    <label>Phone Number</label>
+                    <input type="tel" class="form-control" name="phone" placeholder="1234567890" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="10"  required/>    
+                </div>
+                <div className="mb-3">
+                    <label>Password</label>
+                    <input type="password" className="form-control" placeholder="Enter password" required />
+                </div>
+                <div className="d-grid">
+                <button type="submit" className="btn btn-primary" > Create Account </button>
+                </div>
+                <p className="forgot-password text-right">
+                Already registered <a href="/sign-in">sign in?</a>
+                </p>
+            </form>
+        </div>
         );
  }
 export default Signup;
