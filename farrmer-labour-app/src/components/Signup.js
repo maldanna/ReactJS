@@ -25,8 +25,7 @@ function Signup()
         console(signupData["password"]);
         setEmail(e.email.value)
     }
-    return createPortal(
-        <>
+    return (
         < Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Register</Modal.Title>
@@ -50,7 +49,6 @@ function Signup()
                     </Button>
             </Modal.Footer>
         </Modal>
-        </>, document.getElementById('modal-root')
         );
  }
 export default Signup;

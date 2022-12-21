@@ -5,9 +5,6 @@ import './HomeNavigationbarStyle.css';
 import {NavRouteItems} from "./NavRouteItems";
 import {MenuItems} from "./MenuItems";
 
-
-
-
 function HomeNavigationBar() {
     return (
       <>
