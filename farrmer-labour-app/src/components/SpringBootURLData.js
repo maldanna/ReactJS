@@ -1,17 +1,19 @@
+let domain="https://8080-maldanna-springangularf-dibqneu78m4.ws-us81.gitpod.io";
+
 export const SpringBootURLData={
     
     register: {
-        url:"https://8080-maldanna-springangularf-dibqneu78m4.ws-us80.gitpod.io/user/register",
+        url:domain+"/user/register",
         method:"POST"
     },
 
     login: {
-        url:"",
+        url:domain+"/user/login",
         method:"POST"
     },
 
     updateUser: {
-        url:"",
+        url:domain+"/user/update",
         method:"POST"
     }
 }
